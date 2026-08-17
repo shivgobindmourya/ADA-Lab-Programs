@@ -36,3 +36,27 @@ def myPow(x: float, n: int) -> float:
         n //= 2
 
     return result
+
+def main():
+    print("Binary Search")
+    nums = list(map(int, input("Enter sorted array elements: ").split()))
+    target = int(input("Enter target: "))
+
+    index = search(nums, target)
+
+    if index != -1:
+        print("Target found at index:", index)
+    else:
+        print("Target not found")
+
+    print("\nFast Power")
+    x = float(input("Enter base: "))
+    n = int(input("Enter exponent: "))
+
+    result = myPow(x, n)
+
+    print("Result:", result)
+
+
+if __name__ == "__main__":
+    main()
